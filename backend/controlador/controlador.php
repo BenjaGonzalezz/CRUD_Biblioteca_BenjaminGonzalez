@@ -1,7 +1,6 @@
 <?php
-header("Access-Control-Allow-Origin:*");
 
-require_once '../conexion/conexion.php';
+require_once '../modelo/modelo.php';
 
 $funcion = $_GET['funcion'];
 
@@ -21,21 +20,19 @@ switch ($funcion) {
 }
 
 function crearLibro(){
-    $id = $_POST['id'];
     $nombre = $_POST['nombre'];
     $fecha = $_POST['fecha'];
     $precio = $_POST['precio'];
-    $resultado = (new libro())->agregarLibro($id, $nombre, $fecha, $precio);
+    $resultado = (new libro())->agregarLibro($nombre, $fecha, $precio);
     echo json_encode($resultado);
  }
 
  function modificarLibro(){
-    $id = $_POST['id'];
     $nombre = $_POST['nombre'];
     $fecha = $_POST['fecha'];
     $precio = $_POST['precio'];
-    $resultado = (new libro())->agregarLibro($id, $nombre, $fecha, $precio);
-    echo json_encode($resultado) ;
+    $resultado = (new libro())->modificarLibro($nombre, $fecha, $precio);
+    echo json_encode($resultado);
 }
 function eliminarLibro(){
     $id = $_POST['id'];

@@ -6,33 +6,30 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
         <link rel="stylesheet" href="crear.css">
-        <script src="interfaz_crear.js"></script>
     </head>
     
     <body>
         <header>
-            <a href="../crear/crear.html">Crear</a>
+            <a href="../crear/crear.html" style="text-decoration: underline;">Crear</a>
             <a href="../eliminar/eliminar.html">Eliminar</a>
             <a href="../obtener/obtener.html">Obtener</a>
             <a href="../modificar/modificar.html">Modificar</a>
+            <a href="../orden/Xfecha.html">Libro_Fecha</a>
+            <a href="../orden/Xprecio.html">Libro_Precio</a>
         </header>
         <main>
             <section>
                 <form id="formu">
-                    <label for="id">ID:</label>
-                    <input type="text" id="id" name="id">
                     <label for="nombre">Nombre:</label>
                     <input type="text" id="nombre" name="nombre">
                     <label for="fecha">Fecha:</label>
                     <input type="date" id="fecha" name="fecha">
                     <label for="fecha">Precio:</label>
                     <input type="text" id="precio" name="precio">
-                   <!-- <input class="boton" type="submit" value="Crear"> -->
-                   <button class="boton" type="submit" value="CrearLibro">CREAR LIBRO</button>
+                    <input class="boton" type="submit" value="Crear" onclick="recargarPagina()"> 
                 </form>
             </section>
         </main>
-        <DIV>AAAA</DIV>
+        <script src="crear.js"></script>
     </body>
-    
     </html>

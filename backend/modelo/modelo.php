@@ -11,9 +11,9 @@ class libro {
         return $libro;
     }
 
-    public function agregarLibro($id, $nombre, $fecha, $precio){
-        $sql = "INSERT INTO libro VALUES($id, '$nombre', '$fecha' '$precio')";
+    public function agregarLibro($nombre, $fecha, $precio){
         $connection = connection();
+        $sql = "INSERT INTO libro VALUES(0, '$nombre', '$fecha', '$precio')";
         $respuesta = $connection->query($sql);
         return $respuesta;
     }
@@ -25,8 +25,8 @@ class libro {
         return $respuesta;
     }
     
-    public function modificarLibro($id, $nombre, $fecha, $precio){
-        $sql = "UPDATE libro SET id='$id',nombre ='$nombre',fecha = $fecha precio = $precio WHERE id = $id";  
+    public function modificarLibro($nombre, $fecha, $precio){
+        $sql = "UPDATE libro SET nombre ='$nombre',fecha = '$fecha' precio = $precio";  
         $connection = connection();
         $respuesta = $connection->query($sql);
         return $respuesta;

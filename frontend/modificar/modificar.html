@@ -4,9 +4,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>dasdasdas</title>
         <link rel="stylesheet" href="modificar.css">
-        <script src="interfaz_crear.js"></script>
     </head>
     
     <body>
@@ -14,24 +13,44 @@
             <a href="../crear/crear.html">Crear</a>
             <a href="../eliminar/eliminar.html">Eliminar</a>
             <a href="../obtener/obtener.html">Obtener</a>
-            <a href="../modificar/modificar.html">Modificar</a>
+            <a href="../modificar/modificar.html" style="text-decoration: underline;">Modificar</a>
+            <a href="../orden/Xfecha.html">Libro_Fecha</a>
+            <a href="../orden/Xprecio.html">Libro_Precio</a>
         </header>
         <main>
             <section>
                 <form id="formu">
-                    <label for="id">ID:</label>
-                    <input type="text" id="id" name="id">
                     <label for="nombre">Nombre:</label>
                     <input type="text" id="nombre" name="nombre">
                     <label for="fecha">Fecha:</label>
                     <input type="date" id="fecha" name="fecha">
-                    <label for="fecha">Precio:</label>
+                    <label for="precio">Precio:</label>
                     <input type="text" id="precio" name="precio">
-                   <button class="boton" type="submit" value="CrearLibro">CREAR LIBRO</button>
+                    <button class="boton" type="submit">Modificar</button>
+                    <!--<input class="boton" type="submit" value="Modificar"> -->
                 </form>
             </section>
-            <div>+ TABLA</div>
+            <div class="tabla-container">
+                <table>
+                    <thead class="header-tabla">
+
+                        <tr>
+                            <th>id</th>
+                            <th>Nombre</th>
+                            <th>Fecha</th>
+                            <th>Precio</th>
+                        </tr>
+
+                    </thead>
+                    <tbody id="TablaLibro">
+
+                    </tbody>
+
+
+                </table>
+            </div>
         </main>
+        <script src="modificar.js"></script>
     </body>
     
     </html>
