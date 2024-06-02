@@ -39,12 +39,9 @@ async function eliminarlibro(id){
 
         if(datos){
             alert("se elimino el libro")
-        obtenerlibro()    
-        }else{
+            obtenerlibro()
+        }
+        else{
             alert("no se elimino el libro")
         }
-}
-
-function eliminarlibro(){
-    location.reload(); // Esta función recarga la página actual
 }

@@ -10,7 +10,7 @@ window.onload = () => {
             method: 'POST', // Corregido el nombre del método
             body: fromFormData
         };
-
+        
         let respuesta = await fetch(url, config);
         let datos = await respuesta.json();
 
@@ -22,4 +22,7 @@ window.onload = () => {
             alert('libro no incertado')
         )
     }
+}
+function recargarPagina(){
+    location.reload(); // Esta función recarga la página actual
 }
