@@ -1,4 +1,6 @@
-obtenerLibro()
+window.onload=()=>{
+    obtenerLibro();
+  }
 
 
 let listadelibros=[]
@@ -7,6 +9,7 @@ async function obtenerLibro(){
     let consulta = await fetch(url);
     let datos = await consulta.json();
     listadelibros=datos;
+    console.log(datos);
     mostrarLibro(datos) 
 }
 function mostrarLibro(libro){
@@ -39,7 +42,7 @@ async function eliminarlibro(id){
 
         if(datos){
             alert("se elimino el libro")
-            obtenerlibro()
+            obtenerLibro()
         }
         else{
             alert("no se elimino el libro")
