@@ -21,13 +21,16 @@ window.onload=()=>{
                <td>${libro[i].nombre}</td>
                <td>${libro[i].fecha}</td>
                <td>${libro[i].precio}</td>
-               <td><button onclick="CargarDatos('${libro[i].nombre}', '${libro[i].fecha}', '${libro[i].precio}')">Seleccionar</button></td>
+               <td><button onclick="CargarDatos('${libro[i].id}', '${libro[i].nombre}', '${libro[i].fecha}', '${libro[i].precio}')">Seleccionar</button></td>
        </tr>
        `;
   
     }
   }
-    function CargarDatos(nombre, fecha, precio){
+    function CargarDatos(id, nombre, fecha, precio){
+
+      let idinput = document.querySelector("#id");
+        idinput.value = id;
 
       let nombreInput = document.querySelector("#nombre");
         nombreInput.value = nombre;
